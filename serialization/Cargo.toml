@@ -4,3 +4,6 @@ version = "0.1.0"
 authors = ["Cameron Lind <mediocresurgeon@gmail.com>"]
 
 [dependencies]
+serde_derive = "*"
+serde = "*"
+serde-xml-rs = { git= "https://github.com/RReverser/serde-xml-rs.git"}

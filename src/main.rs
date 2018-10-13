@@ -2,8 +2,10 @@
 
 extern crate serialization;
 
+use serialization::io;
+
 
 fn main() {
     println!("Hello, world!");
-    serialization::io::do_something()
+    io::do_something()
 }
