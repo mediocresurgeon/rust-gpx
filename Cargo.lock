@@ -1,0 +1,11 @@
+[[package]]
+name = "rust-gpx"
+version = "0.1.0"
+dependencies = [
+ "serialization 0.1.0",
+]
+
+[[package]]
+name = "serialization"
+version = "0.1.0"
+
