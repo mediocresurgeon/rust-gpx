@@ -1,5 +1,5 @@
 /// Calculates the haversine of an angle (in radians).
-fn haversine(radians: &f64) -> f64 {
+fn haversine(radians: f64) -> f64 {
     // #1 Divide the angle by two.
     // #2 Get the sin of #1.
     // #3 Square the result of #2.
@@ -21,8 +21,8 @@ pub fn get_angle((lat1, lon1): &(f64, f64),
     // https://en.wikipedia.org/wiki/Haversine_formula#The_haversine_formula
     let cos_lat1 = lat1.cos();
     let cos_lat2 = lat2.cos();
-    let hav_delta_lat = haversine(&(lat2 - lat1));
-    let hav_delta_lon = haversine(&(lon2 - lon1));
+    let hav_delta_lat = haversine(lat2 - lat1);
+    let hav_delta_lon = haversine(lon2 - lon1);
 
     // Computers a better at calculating small distances if atan2 is used instead of asin sqrt
     // This requires intermediate steps and cannot be written as cleanly.
@@ -30,8 +30,8 @@ pub fn get_angle((lat1, lon1): &(f64, f64),
 
     // ir is an intermediate result (so we don't have to do this calculation more than once)
     let ir = hav_delta_lat + (cos_lat1 * cos_lat2 * hav_delta_lon);
-    let y = ir.powf(0.5);
-    let x = (1.0 - ir).powf(0.5);
+    let y = ir.sqrt();
+    let x = (1.0 - ir).sqrt();
     2.0 * y.atan2(x)
 }
 
