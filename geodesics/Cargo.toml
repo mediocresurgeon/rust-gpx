@@ -1,0 +1,6 @@
+[package]
+name = "geodesics"
+version = "0.1.0"
+authors = ["Cameron Lind <mediocresurgeon@gmail.com>"]
+
+[dependencies]

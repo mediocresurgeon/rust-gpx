@@ -6,4 +6,5 @@ authors = ["Cameron Lind <mediocresurgeon@gmail.com>"]
 [workspace]
 
 [dependencies]
+geodesics = { path = "geodesics" }
 serialization = { path = "serialization" }

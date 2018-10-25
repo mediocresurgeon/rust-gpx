@@ -43,6 +43,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "geodesics"
+version = "0.1.0"
+
+[[package]]
 name = "libc"
 version = "0.2.43"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -83,6 +87,7 @@ dependencies = [
 name = "rust-gpx"
 version = "0.1.0"
 dependencies = [
+ "geodesics 0.1.0",
  "serialization 0.1.0",
 ]
 
